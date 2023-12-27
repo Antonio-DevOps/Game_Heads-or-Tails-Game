@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Гра "Орел або Рішка"</title>
+  <link rel="stylesheet" href="main.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet">
+</head>
+<body class="main">
+<div class="container">
+    <h3>Heads or Tails Game</h3>
+    <div class="gametitle"><label for="playerChoice">Оберіть "Орла" (О) або "Рішку" (Р): </label></div>
+<input type="text" id="playerChoice">
+<button onclick="playGame()">Грати</button>
+</div>
+
+
+<script>
+  function playGame() {
+    // Отримуємо значення, введене гравцем
+    var playerChoice = document.getElementById("playerChoice").value.toUpperCase();
+
+    // Перевірка коректності введення гравцем
+    if (playerChoice !== 'O' && playerChoice !== 'P') {
+      alert("Некоректний вибір. Спробуйте ще раз.");
+      return;
+    }
+
+    // Випадковим чином обираємо "Орла" або "Решку"
+    var computerChoice = Math.random() < 0.5 ? 'O' : 'P';
+
+    // Вивід результату
+    alert("Ваш вибір: " + playerChoice + "\nВибір комп'ютера: " + computerChoice);
+
+    if (playerChoice === computerChoice) {
+      alert("Ви виграли!");
+    } else {
+      alert("Ви програли. Спробуйте ще раз.");
+    }
+  }
+</script>
+
+</body>
+</html>
