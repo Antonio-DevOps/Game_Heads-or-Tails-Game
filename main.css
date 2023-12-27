@@ -2,23 +2,24 @@ body{
     background-color: black;
     position: relative;
     font-family:RubikDoodleTriangles, Geneva, Tahoma, sans-serif;
-    /* display: flex;
+    display: flex;
     justify-content: center;
-    align-items: center; */
+    align-items: center;
 }
 h3{
     font-family:'Sevillana', Times, serif
 }
 .container{
-    width: 500px;
+    width: 650px;
     height: 500px;
     color: bisque;
     font-size: 30px;
     font-weight: bolder;
     align-items: center;
-    display: block;
-    position: absolute;
-    right: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 input{
     width: 100px;
@@ -29,6 +30,12 @@ input{
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     border: 4mm ridge rgba(211, 220, 50, .6);
+    margin-right: 50px;
+}
+.bottonPart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .gametitle{
     width: 600px;
