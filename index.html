@@ -13,8 +13,10 @@
 <div class="container">
     <h3>Heads or Tails Game</h3>
     <div class="gametitle"><label for="playerChoice">Оберіть "Орла" (О) або "Рішку" (Р): </label></div>
-<input type="text" id="playerChoice">
+    <div class="bottonPart">
+        <input type="text" id="playerChoice">
 <button onclick="playGame()">Грати</button>
+    </div>
 </div>
 
 
@@ -36,9 +38,9 @@
     alert("Ваш вибір: " + playerChoice + "\nВибір комп'ютера: " + computerChoice);
 
     if (playerChoice === computerChoice) {
-      alert("Ви виграли!");
+      alert("Ви перемогли!");
     } else {
-      alert("Ви програли. Спробуйте ще раз.");
+      alert("Ви програли. Спробуйте ще.");
     }
   }
 </script>
